@@ -1,4 +1,4 @@
-#Q1
+#Question1
 s=input("Enter a sentence:").lower()
 n={}
 words=s.split()
@@ -9,7 +9,7 @@ for word in words:
         n[word]=1
 print("Frequency of words:",n)
 
-#Q2
+#Question2
 y = int(input("Enter a year: "))
 if (y % 4 == 0):
     ly = True
@@ -39,12 +39,12 @@ else:
         m=m+ 1
 print("Next date is %d/%d/%d." % (d, m, y))
       
-#Q3
+#Question3
 list=[3,9,10]
 result=[(x,x**2) for x in list]
 print(result)
 
-#Q4
+#Question4
 gp= int(input("Enter Grade Points: "))
 g = ""
 s = ""
@@ -73,7 +73,7 @@ else:
 	g ="Error"
 print("Your Grade is %s and %s" % (g, s))
 
-#Q5
+#Question5
 for i in range(6):
     for j in range(i):
         print(' ', end='')
@@ -81,7 +81,7 @@ for i in range(6):
         print(chr(65 + j), end='')
     print()
 
-#Q6
+#Question6
 d=dict()
 while True:
         n=input("Enter the Name of the student:")
@@ -116,7 +116,7 @@ search=int(input("Enter the SID to search the detaill of the Student:"))
 name=d[search]
 print("SID: %d Name: %s" %(search, name))
 
-#Q7
+#Question7
 n=int(input("Enter the range:"))
 s=2
 a=1
@@ -137,7 +137,7 @@ else:
         print()
 print("Average of fibonacci series:",s/n)                      
 
-#Q8
+#Question8
 set1={1,2,3,4,5}
 set2={2,4,6,8}
 set3={1,5,9,13,17}
