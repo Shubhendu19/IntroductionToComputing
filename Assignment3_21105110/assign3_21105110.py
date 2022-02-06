@@ -11,33 +11,40 @@ print("Frequency of words:",n)
 
 #Question2
 y = int(input("Enter a year: "))
-if (y % 4 == 0):
-    ly = True
-else:
-    ly = False
-
-m = int(input("Enter a month [1-12] "))
-if m in (1, 3, 5, 7, 8, 10, 12):
-    mlen = 31
-elif m == 2:
-    if ly:
-        mlen = 29
+if 1800<=y<=2025:
+    if (y % 4 == 0):
+        ly = True
     else:
-        mlen = 28
-else:
-    mlen = 30
-
-d = int(input("Enter a day: "))
-if d < mlen:
-    d=d+1
-else:
-    d = 1
-    if m == 12:
-        m = 1
-        y=y+1
+        ly = False
+    m = int(input("Enter a month [1-12] "))
+    if 1<=m<=12:
+        if m in (1, 3, 5, 7, 8, 10, 12):
+            mlen=31
+        elif m == 2:
+            if ly:
+                mlen = 29
+            else:
+                mlen = 28
+        else:
+            mlen=30
+        d = int(input("Enter a day: "))
+        if 1<=d<=31:
+            if d < mlen:
+                d=d+1
+            else:
+                d = 1
+                if m == 12:
+                    m = 1
+                    y=y+1
+                else:
+                    m=m+1
+            print("Next date is %d/%d/%d." % (d, m, y))
+        else:
+            print("Please enter valid day")
     else:
-        m=m+ 1
-print("Next date is %d/%d/%d." % (d, m, y))
+        print("Please enter valid month")
+else:
+    print("Please enter year from 1800-2025")
       
 #Question3
 list=[3,9,10]
